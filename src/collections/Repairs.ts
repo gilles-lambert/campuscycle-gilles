@@ -21,5 +21,7 @@ export const Repairs: CollectionConfig = {
       type: 'textarea',
     },
     // Add new repair fields here.
+    // W6: the reverse side, read from each booking's repairs. It stores nothing itself.
+    { name: 'bookings', type: 'join', collection: 'bookings', on: 'repairs' },
   ],
 }
