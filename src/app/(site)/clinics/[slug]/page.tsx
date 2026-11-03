@@ -103,6 +103,16 @@ export default async function ClinicPage({ params }: Props) {
         className="mt-3 sm:mt-4"
       />
 
+      {/* Usability fix after W6: in a test, a user could not find the booking form lower down the page.
+          This button at the top jumps straight to it (the section "Book a time slot", id="book"). */}
+      <ButtonLink
+        href="#book"
+        size="lg"
+        className="mb-block w-full border-ink bg-coral text-ink hover:border-ink hover:bg-coral-tint sm:w-fit"
+      >
+        Book a time slot
+      </ButtonLink>
+
       <div className="grid gap-block lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
         {/* First in the page (a phone shows it first), on the right on wide screens. */}
         <section aria-labelledby="facts" className="framed grid gap-4 p-6 offset-coral lg:col-start-2 lg:row-start-1">
